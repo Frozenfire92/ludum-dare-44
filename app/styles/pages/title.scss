@@ -1,4 +1,5 @@
 main.title {
+  @include animation(fadeIn, 4s);
   text-align: center;
   > div {
     height: calc(100vh - 2rem); // TODO margin var

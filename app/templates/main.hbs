@@ -1,1 +1,41 @@
-{{outlet}}
+<div class="actions">
+  {{#link-to "player"}}
+    {{svg-jar 'user' class="icon" width="256" height="256"}}
+    <h3>{{model.player.name}}</h3>
+  {{/link-to}}
+
+  {{#link-to "ship"}}
+    {{svg-jar 'anchor' class="icon" width="256" height="256"}}
+    <h3>Ship</h3>
+  {{/link-to}}
+
+  {{#link-to "map"}}
+    {{svg-jar 'map' class="icon" width="256" height="256"}}
+    <h3>Map</h3>
+  {{/link-to}}
+
+  {{#link-to "station"}}
+    {{svg-jar 'home' class="icon" width="256" height="256"}}
+    <h3>Station</h3>
+  {{/link-to}}
+
+  {{#link-to "stats"}}
+    {{svg-jar 'stats-alt' class="icon" width="256" height="256"}}
+    <h3>Stats</h3>
+  {{/link-to}}
+
+  {{#link-to "settings"}}
+    {{svg-jar 'settings' class="icon" width="256" height="256"}}
+    <h3>Settings</h3>
+  {{/link-to}}
+
+  {{!-- Debug --}}
+
+  {{#link-to "story" 'intro'}}
+    <h3>DEBUG: Story</h3>
+  {{/link-to}}
+
+  {{#link-to "battle"}}
+    <h3>DEBUG: Battle</h3>
+  {{/link-to}}
+</div>

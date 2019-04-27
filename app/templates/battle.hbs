@@ -1,10 +1,19 @@
 <div class="fight">
-  <div class="image"></div>
-  <div class="message">Your Rusty Sword does limited damage</div>
-  <button>Spear attack</button>
-  <button>Dagget attack</button>
-  <button>Explosive</button>
-  <button>Run</button>
+  <div class="image">
+    <div class="name">
+      One Super Strong Enemy
+    </div>
+    <div class="healthbar">
+      <div class="bar" style="width: 100%;"></div>
+    </div>
+  </div>
+  <div class="message">
+    <p>{{this.message}}</p>
+  </div>
+  <button {{action this.attack}}>Weapon attack</button>
+  <button {{action this.spell}}>Spell attack</button>
+  <button {{action this.explosive}}>Explosive</button>
+  <button {{action this.run}}>Run</button>
 </div>
 
 <div class="reward">

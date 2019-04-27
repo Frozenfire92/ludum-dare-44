@@ -1,0 +1,15 @@
+<article class="pager">
+  {{#if @page.title}}
+    <h2>{{@page.title}}</h2>
+  {{/if}}
+
+  {{#each @page.content as |item i|}}
+    {{#if (lte i this.index)}}
+      <p>{{item}}</p>
+    {{/if}}
+  {{/each}}
+
+  <a {{action this.next}}>
+    {{if this.isDone "Continue" "Done"}}
+  </a>
+</article>

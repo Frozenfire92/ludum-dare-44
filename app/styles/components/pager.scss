@@ -1,0 +1,31 @@
+.pager {
+  max-width: 700px;
+  margin: 0 auto 3rem;
+
+  @include large-screen {
+    margin-top: 4rem;
+  }
+
+  h2 {
+    @include animation(fadeIn, 1s);
+    font-size: 190%
+  }
+  p {
+    @include animation(fadeIn, 3s);
+    font-size: 120%;
+
+    &:first-of-type {
+      @include animation(fadeIn, 5s);
+    }
+  }
+  a {
+    &:hover {
+      opacity: 1 !important;
+    }
+
+    &:first-of-type {
+      @include animation(halfFadeIn, 8s);
+    }
+  }
+
+}

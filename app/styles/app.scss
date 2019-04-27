@@ -1,5 +1,6 @@
 @import 'variables';
 
+@import 'animations';
 @import 'functions';
 @import 'mixins';
 @import 'util';
@@ -8,3 +9,21 @@
 
 @import 'components';
 @import 'pages';
+
+.icon {
+  display: inline-block;
+  stroke: $font-color;
+  stroke-width: 1;
+  stroke-linecap: square;
+  stroke-linejoin: miter;
+  fill: none;
+  vertical-align: middle;
+
+  &.thick {
+    stroke-width: 2;
+  }
+}
+
+.dark .icon {
+  stroke: $dark-font-color;
+}

@@ -1,5 +1,7 @@
 main.battle {
   .fight {
+    max-width: 800px;
+    margin: 0 auto;
     height: calc(100vh - 2rem);
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -9,10 +11,53 @@ main.battle {
     .image {
       grid-area: image;
       min-height: 25vh;
+      position: relative;
+
+      .name {
+        position: absolute;
+        top: 1rem;
+        left: 0;
+        right: 0;
+        height: 2rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        background-image: $fade-bg
+      }
+
+      .healthbar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1rem;
+
+        .bar {
+          height: 100%;
+          width: 0%;
+          background-color: rgb(0, 218, 0);
+        }
+      }
     }
     .message {
       grid-area: message;
       text-align: center;
+      p {
+        padding: 0.5rem;
+        margin: 0;
+      }
     }
+    button {
+      border: 1px solid $border-color;
+    }
+  }
+}
+
+.dark main.battle .fight {
+  .image .name {
+    background-image: $dark-fade-bg
+  }
+  button {
+    border-color: $dark-border-color;
   }
 }

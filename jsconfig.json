@@ -1,6 +1,16 @@
 {
   "compilerOptions": {
-    "experimentalDecorators": true
+    "target": "es6",
+    "module": "es6",
+    "baseUrl": ".",
+    "paths": {
+      "ld-44/*": ["./app/*"]
+    },
+    "experimentalDecorators": true,
   },
-  "exclude": ["node_modules", "dist"]
+  "exclude": [
+    ".git",
+    "node_modules",
+    "dist"
+  ]
 }

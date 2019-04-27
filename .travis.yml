@@ -1,7 +1,7 @@
 ---
 language: node_js
 node_js:
-  - "10"
+  - "lts/*"
 
 sudo: false
 dist: trusty
@@ -9,9 +9,7 @@ dist: trusty
 addons:
   chrome: stable
 
-cache:
-  directories:
-    - $HOME/.npm
+cache: yarn
 
 env:
   global:

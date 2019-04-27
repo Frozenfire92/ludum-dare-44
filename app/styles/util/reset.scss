@@ -16,9 +16,9 @@ figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
   border: 0;
-  font: inherit;
   font-family: $font-stack;
   font-size: 100%;
+  line-height: 175%;
   margin: 0;
   padding: 0;
   vertical-align: baseline;
@@ -32,10 +32,6 @@ small {
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
-}
-
-body {
-  line-height: 1;
 }
 
 ol, ul {

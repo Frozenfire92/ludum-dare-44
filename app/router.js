@@ -13,6 +13,12 @@ Router.map(function() {
   this.route('settlement');
   this.route('battle');
   this.route('main');
+  this.route('new');
+  this.route('map');
+  this.route('station');
+  this.route('ship');
+  this.route('player');
+  this.route('story', { path: '/story/:id' });
 });
 
 export default Router;
