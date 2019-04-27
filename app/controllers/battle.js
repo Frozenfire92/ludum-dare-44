@@ -13,11 +13,12 @@ export default class BattleController extends Controller {
     this.message = 'You attacked brilliantly';
     // Update message
   }
-  @action spell() {
-    console.log('spell');
+  @action shield() {
+    console.log('shield');
+    this.message = 'You activated your shield just in time';
   }
   @action explosive() {
-    console.log('explosive');
+    console.log('You blew them up');
   }
   @action run() {
     console.log('run');

@@ -5,7 +5,7 @@ module.exports = function(environment) {
     modulePrefix: 'ld-44',
     environment,
     rootURL: '/',
-    locationType: 'auto',
+    locationType: 'hash',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -50,7 +50,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.rootURL = '/ludum-dare-44/';
   }
 
   return ENV;

@@ -8,7 +8,7 @@ module.exports = function(/* environment, appConfig */) {
     name: "ld-44",
     short_name: "ld-44",
     description: "",
-    start_url: "/",
+    start_url: "/ludum-dare-44/",
     display: "standalone",
     background_color: "#fff",
     theme_color: "#fff",
