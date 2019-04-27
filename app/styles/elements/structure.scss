@@ -1,0 +1,27 @@
+html {
+  background: $bg-color;
+  color: $font-color;
+
+  &.dark {
+    background: $dark-bg-color;
+    color: $dark-font-color;
+  }
+}
+
+body {
+  margin: 1rem;
+  line-height: 1.35;
+}
+
+header {
+  // position: fixed;
+  // top: 0;
+  // left: 0;
+  // right: 0;
+  padding: 0.5rem 0;
+  background: $bg-color;
+}
+
+.dark header {
+  background: $dark-bg-color;
+}

@@ -1,0 +1,13 @@
+a {
+  color: $primary-color;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:focus {
+    border-bottom: 1px solid $border-color;
+  }
+}
+
+.dark a:focus {
+  border-bottom: 1px solid $dark-border-color;
+}

@@ -1,0 +1,36 @@
+label {
+  display: block;
+  padding: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+input,
+select {
+  color: $font-color;
+  background: none;
+  border: none;
+  border-bottom: 1px solid $border-color;
+  border-radius: 0;
+  padding: 0.5rem;
+  font-size: 1rem;
+
+  &[type="radio"] {
+    border: initial;
+  }
+
+  &[type="file"] {
+    display: none;
+  }
+}
+
+input[type="submit"] {
+  margin-top: 1rem;
+}
+
+.dark {
+  input,
+  select {
+    color: $dark-font-color;
+    border-bottom: 1px solid $dark-border-color;
+  }
+}

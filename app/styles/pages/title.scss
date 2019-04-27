@@ -1,0 +1,9 @@
+main.title {
+  text-align: center;
+  > div {
+    height: calc(100vh - 2rem); // TODO margin var
+    div {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+<Header />
+
+<section>
+  <h4>Color Scheme</h4>
+  <label>
+    <select
+      onchange={{action (mut this.settings.appColorScheme) value="target.value"}}
+      value={{this.settings.appColorScheme}}
+    >
+      <option value="light" selected={{eq "light" this.settings.appColorScheme}}>Light</option>
+      <option value="dark" selected={{eq "dark" this.settings.appColorScheme}}>Dark</option>
+    </select>
+  </label>
+</section>

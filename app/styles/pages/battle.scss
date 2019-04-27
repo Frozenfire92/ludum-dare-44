@@ -1,0 +1,18 @@
+main.battle {
+  .fight {
+    height: calc(100vh - 2rem);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 0.5fr 1fr 1fr;
+    grid-template-areas: "image image" "message message" "button button" "button button";
+
+    .image {
+      grid-area: image;
+      min-height: 25vh;
+    }
+    .message {
+      grid-area: message;
+      text-align: center;
+    }
+  }
+}
