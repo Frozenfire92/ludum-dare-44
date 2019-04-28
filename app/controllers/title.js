@@ -10,7 +10,7 @@ export default class TitleController extends Controller {
       this.transitionToRoute('main');
     }
     else {
-      this.transitionToRoute('new');
+      this.transitionToRoute('story', 'intro');
     }
   }
 }

@@ -4,18 +4,21 @@
       One Super Strong Enemy
     </div>
     <div class="healthbar">
-      <div class="bar" style="width: 100%;"></div>
+      <div class="bar" style={{this.style}}></div>
     </div>
   </div>
   <div class="message">
     <p>{{this.message}}</p>
   </div>
-  <button {{action this.attack}}>Weapon attack</button>
-  <button {{action this.shield}}>Defend</button>
-  <button {{action this.explosive}}>Explosive</button>
-  <button {{action this.run}}>Run</button>
-</div>
-
-<div class="reward">
-
+  {{#if (gt this.health 0)}}
+    <button {{action this.attack}}>Weapon attack</button>
+    <button {{action this.shield}}>Defend</button>
+    <button {{action this.explosive}}>Explosive</button>
+    <button {{action this.run}}>Run</button>
+  {{else}}
+    <div></div>
+    <div></div>
+    <div></div>
+    <button>Continue</button>
+  {{/if}}
 </div>

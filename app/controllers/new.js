@@ -10,6 +10,6 @@ export default class NewController extends Controller {
     let name = e.target.name.value || e.target.name.placeholder;
     let talent = e.target.talent.value;
     this.data.player.create(name, talent);
-    this.transitionToRoute('story', 'intro');
+    this.transitionToRoute('main');
   }
 }

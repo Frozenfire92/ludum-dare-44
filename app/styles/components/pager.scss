@@ -12,7 +12,7 @@
   }
   p {
     @include animation(fadeIn, 3s);
-    font-size: 120%;
+    font-size: 140%;
 
     &:first-of-type {
       @include animation(fadeIn, 5s);
