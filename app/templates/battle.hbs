@@ -1,24 +1,3 @@
-<div class="fight">
-  <div class="image">
-    <div class="name">
-      One Super Strong Enemy
-    </div>
-    <div class="healthbar">
-      <div class="bar" style={{this.style}}></div>
-    </div>
-  </div>
-  <div class="message">
-    <p>{{this.message}}</p>
-  </div>
-  {{#if (gt this.health 0)}}
-    <button {{action this.attack}}>Weapon attack</button>
-    <button {{action this.shield}}>Defend</button>
-    <button {{action this.explosive}}>Explosive</button>
-    <button {{action this.run}}>Run</button>
-  {{else}}
-    <div></div>
-    <div></div>
-    <div></div>
-    <button>Continue</button>
-  {{/if}}
-</div>
+<Battle
+  @continue={{this.toMain}}
+/>

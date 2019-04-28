@@ -1,1 +1,20 @@
-<Header @currentPage="Player" />
+<Header />
+{{!-- @currentPage={{model.player.name}} --}}
+<div>{{model.player.name}}</div>
+<div>Job: {{capitalize model.player.talent}}</div>
+
+{{#each this.equipables as |equipment|}}
+  <label>
+    {{equipment.label}}
+    <select onchange={{action this.updateEquipment equipment}}>
+      {{#each equipment.options as |o|}}
+        <option
+          value={{o}}
+          selected={{eq o (get this.data.player equipment.value)}}
+        >
+          {{o}}
+        </option>
+      {{/each}}
+    </select>
+  </label>
+{{/each}}
