@@ -5,17 +5,25 @@ module.exports = function(/* environment, appConfig */) {
   // supported properties
 
   return {
-    name: "ld-44",
-    short_name: "ld-44",
-    description: "",
+    name: "Earth External Station 4",
+    short_name: "EES4",
+    description: "A small prototype game made for ludum dare 44",
     start_url: "/ludum-dare-44/",
     display: "standalone",
-    background_color: "#fff",
-    theme_color: "#fff",
+    background_color: "#313131",
+    theme_color: "#313131",
     icons: [
+      {
+        src: '/ludum-dare-44/assets/images/icon-192.png',
+        sizes: '192x192'
+      },
+      {
+        src: '/ludum-dare-44/assets/images/icon-512.png',
+        sizes: '512x512'
+      }
     ],
     ms: {
-      tileColor: '#fff'
+      tileColor: '#313131'
     }
   };
 }
