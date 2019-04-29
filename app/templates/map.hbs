@@ -1,3 +1,20 @@
-<Header @currentPage="Map" />
+{{#if this.encounter}}
+  <Encounter
+    @encounter={{this.encounter}}
+    @done={{action this.encounterComplete}}
+  />
+{{else}}
+  <Header @currentPage="Map" />
 
-<button {{action this.explore}}>Explore</button>
+  <Map />
+
+  <div class="actions small">
+    <button {{action this.expedition "explore-planet"}}>Explore planet</button>
+    <button {{action this.expedition "explore-system"}}>Explore nearby system</button>
+    {{#if this.data.story.wentToSystem}}
+      <button {{action this.expedition "explore-galactic-network"}}>Explore galactic network</button>
+    {{else}}
+      <button disabled>?</button>
+    {{/if}}
+  </div>
+{{/if}}

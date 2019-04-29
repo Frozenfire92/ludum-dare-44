@@ -59,6 +59,11 @@ input[type="submit"] {
     display: inline;
     vertical-align: bottom;
   }
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: initial;
+  }
 }
 
 .dark {

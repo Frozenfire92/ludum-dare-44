@@ -1,13 +1,19 @@
-<div
-  class="flex-center"
-  role="button"
-  {{action this.startGame}}
->
-  <div>
-    <h1>Ludum Dare 44</h1>
-    <h2>An Adventure</h2>
-    {{#if this.data.player.name}}
-      <h3>Resume Game</h3>
-    {{/if}}
+{{#if this.showIntroStory}}
+  <Encounter
+    @encounter={{this.introStory}}
+    @done={{action this.transitionToNew}}
+  />
+{{else}}
+  <div
+    class="flex-center"
+    role="button"
+    {{action this.startGame}}
+  >
+    <div>
+      <h1>Earth External Station 4</h1>
+      {{#if this.data.player.name}}
+        <h3>Resume</h3>
+      {{/if}}
+    </div>
   </div>
-</div>
+{{/if}}

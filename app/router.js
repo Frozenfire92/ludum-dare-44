@@ -8,17 +8,18 @@ const Router = EmberRouter.extend({
 
 Router.map(function() {
   this.route('title');
-  this.route('settings');
-  this.route('stats');
-  this.route('settlement');
-  this.route('battle');
-  this.route('main');
   this.route('new');
+  this.route('main');
+
   this.route('map');
-  this.route('station');
-  this.route('ship');
+
   this.route('player');
-  this.route('story', { path: '/story/:id' });
+  this.route('ship');
+  this.route('station');
+
+  this.route('stats');
+  this.route('settings');
+  this.route('gameover');
 });
 
 export default Router;

@@ -1,21 +1,28 @@
 import Service, { inject as service } from '@ember/service';
 import { action } from '@ember/object';
-import { generateArmor } from 'ld-44/utils/data/armor';
+import { generateArmor, generateWeapons } from 'ld-44/utils/generators/items';
 
 export default class DataService extends Service {
   @service player;
   @service settings;
+  @service story;
 
   @service router;
 
+  armor = [];
+  weaponse = [];
+
   constructor() {
     super(...arguments);
-    console.log(generateArmor());
+    this.armor = generateArmor();
+    this.weapons = generateWeapons();
   }
 
   @action reset() {
     this.player.reset();
     this.settings.reset();
+    this.story.reset();
+
     this.router.transitionTo('title');
   }
 }

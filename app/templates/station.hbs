@@ -1,1 +1,31 @@
-<Header @currentPage="Station" />
+{{#if this.encounter}}
+  {{#if (eq this.encounter.0.type 'shop')}}
+    <Header @currentPage="Shop" @cb={{action this.encounterComplete}} />
+  {{/if}}
+  <Encounter
+    @encounter={{this.encounter}}
+    @done={{action this.encounterComplete}}
+  />
+{{else}}
+  <Header @currentPage="Station" />
+
+  <div class="actions small">
+    <button {{action this.openShop}}>Shop</button>
+    <button {{action this.startConversation}}>Strike a conversation</button>
+    <a>
+      <h3>Population: 100</h3>
+    </a>
+    <a>
+      <h3>Water: 100kg</h3>
+    </a>
+    <a>
+      <h3>Food: 100kg</h3>
+    </a>
+    <a>
+      <h3>Oxygen: 100kg</h3>
+    </a>
+    <a>
+      <h3>Energy: 100J</h3>
+    </a>
+  </div>
+{{/if}}

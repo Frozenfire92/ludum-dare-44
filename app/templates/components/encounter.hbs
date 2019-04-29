@@ -1,0 +1,18 @@
+{{#if @encounter}}
+  {{#if (eq this.current.type 'story')}}
+    <Pager
+      @page={{this.current}}
+      @done={{this.next}}
+    />
+  {{else if (eq this.current.type 'battle')}}
+    <Battle
+      @continue={{this.next}}
+      @battle={{this.current}}
+    />
+  {{else if (eq this.current.type 'shop')}}
+    <Shop
+      @done={{this.next}}
+      @items={{this.current.items}}
+    />
+  {{/if}}
+{{/if}}

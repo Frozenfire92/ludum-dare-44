@@ -1,0 +1,9 @@
+<div class="actions">
+  {{#each @items as |item|}}
+    <a {{action this.buyItem item}}> {{!-- TODO action for buying --}}
+      <span class="top-left">{{if (contains item.name this.data.player.equipmentNames) 'owned' item.cost}}</span>
+      <span class="top-right">{{capitalize item.type}}</span>
+      <h3 title={{item.name}}>{{item.name}}</h3>
+    </a>
+  {{/each}}
+</div>

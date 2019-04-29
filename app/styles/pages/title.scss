@@ -1,7 +1,8 @@
-main.page-title {
-  @include animation(fadeIn, 4s);
-  text-align: center;
-  > div {
+// TODO for all pages
+main {
+  .flex-center {
+    @include animation(fadeIn, 4s);
+    text-align: center;
     height: calc(100vh - 2rem); // TODO margin var
     div {
       width: 100%;

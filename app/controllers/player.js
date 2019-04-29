@@ -11,32 +11,27 @@ export default class PlayerController extends Controller {
       {
         value: 'headgear',
         label: 'Headgear',
-        options: ['Basic cap', 'Cool cap']
+        options: this.data.player.equipment.filterBy('type', 'headgear').mapBy('name')
       },
       {
         value: 'tunic',
         label: 'Tunic',
-        options: ['Basic tunic', 'Cool tunic']
+        options: this.data.player.equipment.filterBy('type', 'tunic').mapBy('name')
       },
       {
         value: 'pants',
         label: 'Pants',
-        options: ['Basic pants', 'Cool pants']
+        options: this.data.player.equipment.filterBy('type', 'pants').mapBy('name')
       },
       {
         value: 'boots',
         label: 'Boots',
-        options: ['Basic boots']
+        options: this.data.player.equipment.filterBy('type', 'boots').mapBy('name')
       },
       {
         value: 'weapon',
         label: 'Weapon',
-        options: ['Basic dagger']
-      },
-      {
-        value: 'spell',
-        label: 'Spell',
-        options: ['Basic prayer']
+        options: this.data.player.equipment.filter(n => ['guns', 'swords', 'daggers', 'nontraditional'].includes(n.type)).mapBy('name')
       }
     ];
   }

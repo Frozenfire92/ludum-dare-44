@@ -1,6 +1,12 @@
 <header>
-  {{#link-to "main"}}
-    {{svg-jar "chevron-left" class="icon thick" height="32" width=32}}
-  {{/link-to}}
+  {{#if @cb}}
+    <a {{action @cb}}>
+      {{svg-jar "chevron-left" class="icon thick" height="32" width=32}}
+    </a>
+  {{else}}
+    {{#link-to (or @to "main")}}
+      {{svg-jar "chevron-left" class="icon thick" height="32" width=32}}
+    {{/link-to}}
+  {{/if}}
   {{@currentPage}}
 </header>

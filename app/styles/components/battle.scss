@@ -21,7 +21,8 @@
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      background-image: $fade-bg
+      background-image: $fade-bg;
+      padding-left: 0.25rem;
     }
 
     .healthbar {

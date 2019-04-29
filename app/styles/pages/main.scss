@@ -1,19 +1,23 @@
-main.page-main {
+main {
   .actions {
     display: grid;
 
-    grid-template-columns: repeat(auto-fill, minmax(12rem, 100%));
-    grid-auto-rows: 12rem;
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 100%));
+    grid-auto-rows: 10rem;
     grid-gap: 1rem;
-    justify-content: center;
+
+    &.small {
+      grid-auto-rows: 4rem;
+    }
 
     @include medium-screen {
-      grid-template-columns: repeat(auto-fill, 12rem);
+      grid-auto-rows: 10rem !important;
+      grid-template-columns: repeat(auto-fill, 10rem);
     }
 
     > a {
       cursor: pointer;
-      border: 1px solid white;
+      border: 1px solid $border-color;
       color: $font-color;
       position: relative;
 
@@ -22,6 +26,20 @@ main.page-main {
         max-height: calc(100% - 2rem);
         display: block;
         margin: auto;
+      }
+
+      .top-left {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding-left: 4px;
+      }
+
+      .top-right {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding-right: 4px;
       }
 
       h3 {
@@ -37,11 +55,16 @@ main.page-main {
         text-overflow: ellipsis;
       }
     }
+
+    button {
+      white-space: normal;
+    }
   }
 }
 
-.dark main.page-main .actions > a {
+.dark main .actions > a {
   color: $dark-font-color;
+  border-color: $dark-border-color;
 
   h3 {
     background-image: $dark-fade-bg;

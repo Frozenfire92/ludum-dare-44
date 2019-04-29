@@ -2,6 +2,8 @@
 {{!-- @currentPage={{model.player.name}} --}}
 <div>{{model.player.name}}</div>
 <div>Job: {{capitalize model.player.talent}}</div>
+<div>Level: {{model.player.level}}</div>
+<div>Health: {{model.player.health}}</div>
 
 {{#each this.equipables as |equipment|}}
   <label>
